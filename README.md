@@ -8,9 +8,10 @@ This is an example backend for a diet and calorie tracking application built(mos
 
 Following are the different DDD components that are used in this project, note that some of them are optional
 
-![DDD components](../resources/ddd.png)
+![DDD components](ddd.png)
 
 ## Technologies Used
+* Kotlin
 * Spring boot 3
 * Apache Kafka for domain events
 * MYSQL and MongoDB for data persistent
