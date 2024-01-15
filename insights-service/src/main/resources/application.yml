@@ -1,0 +1,21 @@
+server:
+  port: 5098
+
+
+spring:
+  kafka:
+    consumer:
+      group-id: insights-group
+      auto-offset-reset: latest
+      bootstrap-servers: localhost:9094
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+
+kafka:
+  topic:
+    meal: meal

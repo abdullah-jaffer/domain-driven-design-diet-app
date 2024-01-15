@@ -1,0 +1,10 @@
+server:
+  port: 5098
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: insights
+      repositories:
+        enabled: true

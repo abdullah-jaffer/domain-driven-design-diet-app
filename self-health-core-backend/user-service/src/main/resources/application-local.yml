@@ -1,0 +1,53 @@
+server:
+  port: 5099
+
+datasource:
+  user:
+    url: jdbc:mysql://localhost:3306/user
+    username: root
+    password: my-secret-pw
+  food-db:
+    url: jdbc:mysql://localhost:3306/food-db
+    username: root
+    password: my-secret-pw
+  meal-db:
+    url: jdbc:mysql://localhost:3306/meal-db
+    username: root
+    password: my-secret-pw
+  content-db:
+    url: jdbc:mysql://localhost:3306/content-db
+    username: root
+    password: my-secret-pw
+
+liquibase:
+  datasource:
+    user:
+      url: jdbc:mysql://localhost:3306/user
+      username: root
+      password: my-secret-pw
+      changelog: classpath:db/changelog/db.changelog-master-local.xml
+    food-db:
+      url: jdbc:mysql://localhost:3306/food-db
+      username: root
+      password: my-secret-pw
+      changelog: classpath:db/changelog.foods/db.changelog-master-local.xml
+    meal-db:
+      url: jdbc:mysql://localhost:3306/meal-db
+      username: root
+      password: my-secret-pw
+      changelog: classpath:db/changelog.meal/db.changelog-master-local.xml
+    content-db:
+      url: jdbc:mysql://localhost:3306/content-db
+      username: root
+      password: my-secret-pw
+      changelog: classpath:db/changelog.content/db.changelog-master-local.xml
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
