@@ -41,13 +41,13 @@ Functionality:
 * Save meal entry with total calorie intake for user
 * Fire domain event for each meal entry(to be used by other domains)
 
-3. User Domain
+3. User Domain(Not DDD, simple CRUD)
 Persistes User metadata into the system to be used throught the system
 
 Functionality:
 * Add new users into the system
 
-4. Content Domain
+4. Content Domain(Not DDD, simple CRUD)
 This domain just displays a list of posts/content to the user with some diet and meal advice
 
 Functionality:
