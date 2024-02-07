@@ -4,17 +4,11 @@ server:
 datasource:
   food-db:
     url: jdbc:tc:mysql:8.0.36:///food
-    username: root
-    password: my-secret-pw
-    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
 
 liquibase:
   datasource:
     food-db:
       url: jdbc:tc:mysql:8.0.36:///food
-      username: root
-      password: my-secret-pw
-      driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
       changelog: classpath:db/changelog/db.changelog-master-local.xml
 
 logging:
