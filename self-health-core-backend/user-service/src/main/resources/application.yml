@@ -7,6 +7,15 @@ liquibase:
         changelog: classpath:db/changelog/db.changelog-master.xml
 
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
   kafka:
     producer:
       bootstrap-servers: localhost:9094

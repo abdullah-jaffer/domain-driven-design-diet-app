@@ -1,19 +1,51 @@
 server:
   port: 5099
 
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
 datasource:
   user:
-    url: jdbc:mysql://localhost:3306/user
+    url: jdbc:tc:mysql:8.0.36:///user
     username: root
     password: my-secret-pw
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
 
 liquibase:
   datasource:
     user:
-      url: jdbc:mysql://localhost:3306/user
+      url: jdbc:tc:mysql:8.0.36:///user
       username: root
       password: my-secret-pw
+      driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
       changelog: classpath:db/changelog/db.changelog-master-local.xml
+    content-db:
+      url: jdbc:tc:mysql:8.0.36:///content
+      username: root
+      password: my-secret-pw
+      driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+      changelog: classpath:db/changelog.content/db.changelog-master-local.xml
+    food-db:
+      url: jdbc:tc:mysql:8.0.36:///food
+      username: root
+      password: my-secret-pw
+      driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+      changelog: classpath:db/changelog.foods/db.changelog-master-local.xml
+    meal-db:
+      url: jdbc:tc:mysql:8.0.36:///meal
+      username: root
+      password: my-secret-pw
+      driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+      changelog: classpath:db/changelog.meal/db.changelog-master-local.xml
+
+
 
 logging:
   level:
