@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/insights-service/src/main/kotlin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-health-core-backend/content-module/src/main/kotlin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-health-core-backend/food-module/src/main/kotlin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-health-core-backend/meal-module/src/main/kotlin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-health-core-backend/src/main/kotlin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-health-core-backend/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/self-health-core-backend/user-service/src/main/kotlin" charset="UTF-8" />
+  </component>
+</project>
