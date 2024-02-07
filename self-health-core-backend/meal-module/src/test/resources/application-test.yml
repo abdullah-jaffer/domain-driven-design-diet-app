@@ -3,14 +3,14 @@ server:
 
 datasource:
   user:
-    url: jdbc:mysql://localhost:3306/user
+    url: jdbc:mysql://localhost:3306/meal
     username: root
     password: my-secret-pw
 
 liquibase:
   datasource:
     user:
-      url: jdbc:mysql://localhost:3306/user
+      url: jdbc:mysql://localhost:3306/meal
       username: root
       password: my-secret-pw
       changelog: classpath:db/changelog/db.changelog-master-local.xml
